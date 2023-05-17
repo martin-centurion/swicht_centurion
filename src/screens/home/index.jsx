@@ -5,7 +5,7 @@ import { styles } from './styles';
 import { Header, YearContainer } from '../../components';
 import { theme } from '../../constants';
 
-const Home = () => {
+const Home = ({ onYearSelected }) => {
   const [yearOption, setYearOption] = useState('');
   const [confirmed, setConfirmed] = useState(false);
   const [selectedYear, setSelectedYear] = useState(null);
@@ -16,7 +16,7 @@ const Home = () => {
 
   const onHandlerConfirm = () => {
     const chosenYear = String(yearOption);
-    if (isNaN(chosenYear) || chosenYear <= 18 || chosenYear > 130) {
+    if (isNaN(chosenYear) || chosenYear <= 17 || chosenYear > 130) {
       Alert.alert('Ups!', 'Debe ser mayor de 18 para continuar', [
         { text: 'Ok', style: 'destructive', onPress: () => setYearOption('') },
       ]);
@@ -27,7 +27,9 @@ const Home = () => {
     }
   };
 
-  const onHandlerStart = () => {};
+  const onHandlerStart = () => {
+    onYearSelected(selectedYear);
+  };
   const Confirmed = () =>
     confirmed ? (
       <View style={styles.confirmedContainer}>

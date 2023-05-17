@@ -15,7 +15,7 @@ export const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     marginTop: 20,
-    fontWeight: 'bold',
+    fontFamily: 'Inter-Bold',
     color: theme.colors.primary,
   },
   buttonContainer: {
