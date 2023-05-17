@@ -4,21 +4,15 @@ import { theme } from '../../constants';
 
 export const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: theme.colors.terciary,
-  },
-  titleContainer: {
+    height: 80,
+    backgroundColor: theme.colors.primary,
+    marginTop: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 40,
   },
   title: {
-    fontSize: 30,
-    marginTop: 20,
+    fontSize: 20,
+    color: theme.colors.white,
     fontWeight: 'bold',
-    color: theme.colors.primary,
-  },
-  buttonContainer: {
-    marginTop: 40,
   },
 });
