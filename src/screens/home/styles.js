@@ -21,4 +21,13 @@ export const styles = StyleSheet.create({
   buttonContainer: {
     marginTop: 40,
   },
+  inputContainer: {
+    marginTop: 40,
+  },
+  inputTitle: {
+    fontSize: 20,
+  },
+  input: {
+    marginTop: 20,
+  },
 });
